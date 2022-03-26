@@ -23,8 +23,9 @@ namespace ConsoleApp18
                 new Fruit("Orange", 500),
                 new Meat("Fish", 100.0),
                 new Meat("Beef", 75.0)
+            };
 
-                Shop shop = new Shop("Super Market", persons, products);
+            Shop shop = new Shop("Super Market", persons, products);
 
             shop.Print();
         }

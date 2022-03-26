@@ -12,6 +12,6 @@ namespace ConsoleApp18
         {
         }
 
-        public void Print(string prefix) => Console.WriteLine(prefix);
+        public override string Print() => $"Seller: {Name} ({Age} y.o)";
     }
 }

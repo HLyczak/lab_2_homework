@@ -21,6 +21,6 @@ namespace ConsoleApp18
             this.Weight = weight;
         }
 
-        public void Print(string prefix) => Console.WriteLine(prefix);
+        public override string Print() => $"{Name} ({weight} kg){Environment.NewLine}";
     }
 }

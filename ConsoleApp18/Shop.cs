@@ -8,7 +8,7 @@ namespace ConsoleApp18
 {
     internal class Shop : IThing
     {
-        private String name;
+        private string name;
         private Person[] people;
         private Product[] products;
 
@@ -25,6 +25,24 @@ namespace ConsoleApp18
             this.products = products;
         }
 
-        public void Print(string prefix) => Console.WriteLine(prefix);
+        public void Print()
+        {
+            Console.WriteLine($"Shop: {name}");
+            string prints = $"{Environment.NewLine}  ---People---{Environment.NewLine}";
+
+            foreach (var person in people)
+            {
+                prints += person.Print();
+            }
+
+            prints += $"{Environment.NewLine}-- Products: -- {Environment.NewLine}";
+
+            foreach (var product in products)
+            {
+                prints += product.Print();
+            }
+
+            Console.WriteLine(prints);
+        }
     }
 }

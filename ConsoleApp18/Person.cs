@@ -33,6 +33,6 @@ namespace ConsoleApp18
             set { age = value; }
         }
 
-        public void Print(string prefix) => Console.WriteLine(prefix);
+        public virtual string Print() => $" {Name}, ({Age} y.o.){Environment.NewLine}";
     }
 }

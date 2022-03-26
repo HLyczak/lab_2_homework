@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp18
 {
-    internal class Product
+    internal class Product : IThing
     {
         private string name;
 
@@ -16,11 +16,15 @@ namespace ConsoleApp18
             set { name = value; }
         }
 
-        public Product(string Name)
+        public Product(string name)
         {
             this.Name = name;
         }
 
-        public void Print(string prefix) => Console.WriteLine(prefix);
+        public virtual string Print()
+        {
+            return $" {Environment.NewLine}){Environment.NewLine}";
+            //Console.WriteLine($"Seller: {Name} ({Age} y.o)");
+        }
     }
 }

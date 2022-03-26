@@ -21,6 +21,6 @@ namespace ConsoleApp18
             this.Count = count;
         }
 
-        public void Print(string prefix) => Console.WriteLine(prefix);
+        public override string Print() => $"{Name} ({count} fruits){Environment.NewLine}";
     }
 }
